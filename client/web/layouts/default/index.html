@@ -1,0 +1,14 @@
+<template name="layoutDefault">
+  <div class="layoutDefault layout d-flex flex-column min-vh-100">
+    <nav>
+      {{> Template.dynamic template=nav}}
+    </nav>
+
+    <div class="d-flex flex-fill">
+      {{> Template.dynamic template=page}}
+    </div>
+
+    {{> Template.dynamic template=footer}}
+  </div>
+  {{> Loading}}
+</template>

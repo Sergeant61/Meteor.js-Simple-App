@@ -1,0 +1,11 @@
+.is-invalid {
+  border-color: var(--bs-danger);
+
+  & + label {
+    color: var(--bs-danger);
+
+    &:after {
+      content: attr(data-content);
+    }
+  }
+}

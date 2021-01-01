@@ -1,0 +1,7 @@
+{
+  "public": {
+    "zigoApi": {
+      "baseUrl": "https://api.collectapi.com"
+    }
+  }
+}

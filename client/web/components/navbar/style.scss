@@ -1,0 +1,21 @@
+.componentNavbar {
+  padding-top: 56px;
+
+  .navbar{
+    height: 56px;
+  }
+
+  .navbar-brand {
+    img {
+      display: block;
+      max-height: 30px;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 900;
+  }
+
+}

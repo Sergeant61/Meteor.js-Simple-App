@@ -1,0 +1,18 @@
+{
+  "componentNavbar": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "about": "About",
+    "admin": "Admin",
+    "goBack": "Go Back",
+    "myAccount": "My Account",
+    "signout": "Sign Out"
+  },
+  "globals": {
+    "title": "Title"
+  },
+  "pageNotFound": {
+    "title": "page not found"
+  }
+}

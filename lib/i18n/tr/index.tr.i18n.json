@@ -1,0 +1,18 @@
+{
+  "componentNavbar": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "contact": "İletişim",
+    "about": "Hakkınmızda",
+    "admin": "Admin",
+    "goBack": "Geri Dön",
+    "myAccount": "Hesabım",
+    "signout": "Çıkış"
+  },
+  "globals": {
+    "title": "Başlık"
+  },
+  "pageNotFound": {
+    "title": "sayfa bulunamadı"
+  }
+}

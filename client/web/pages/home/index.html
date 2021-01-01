@@ -1,0 +1,43 @@
+<template name="pageHome">
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="d-flex">
+                <div class="ms-auto">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        {{#each languages}}
+                        <label class="btn btn-secondary {{#if eq value ../language.get}}active{{/if}} brd-select-language">
+                            {{#if eq value ../language.get}}
+                            <input type="radio" name="options" id="option_{{value}}" checked> {{text}}
+                            {{else}}
+                            <input type="radio" name="options" id="option_{{value}}"> {{text}}
+                            {{/if}}
+                        </label>
+                        {{/each}}
+
+                    </div>
+
+                </div>
+            </div>
+
+            {{#each news.get}}
+
+            <div class="col-md-4 col-lg-3 p-1">
+
+                <div class="card h-100">
+                    <img src="{{image}}" class="card-img-top" style="height: 180px; object-fit: cover;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">{{description}}</p>
+                        <a href="{{url}}" target="_blank" class="btn btn-primary">Go news</a>
+                    </div>
+                </div>
+
+            </div>
+            {{/each}}
+
+        </div>
+
+    </div>
+</template>

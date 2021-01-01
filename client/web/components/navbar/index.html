@@ -1,0 +1,61 @@
+<template name="componentNavbar">
+  <div class="componentNavbar">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow">
+      <div class="container">
+
+        <a class="navbar-brand mt-0 pt-0" href="/">
+          <img src="/assets/images/logo-black.svg" alt="Meteor logo" class="d-inline-block align-top" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link {{isActive '/' 'active'}}" href="/">{{_ 'componentNavbar.home'}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{isActive 'products' 'active'}}" href="/products">{{_ 'componentNavbar.products'}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{isActive 'contact' 'active'}}" href="/contact">{{_ 'componentNavbar.contact'}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{isActive 'about' 'active'}}" href="/about">{{_ 'componentNavbar.about'}}</a>
+            </li>
+            {{#if currentUser}}
+              <li class="nav-item">
+                <a class="nav-link {{isActive 'settings' 'active'}}" href="/settings/users">{{_ 'componentNavbar.admin'}}</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="brdProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-user-circle fa-lg"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="brdProfileDropdown">
+                  <li><a class="dropdown-item" href="/my-account">{{_ 'componentNavbar.myAccount'}}</a></li>
+                  <li><a class="dropdown-item sign-out" href="#">{{_ 'componentNavbar.signout'}}</a></li>
+                </ul>
+              </li>
+            {{else}}
+
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/sign-in">
+                  <i class="fas fa-user-circle fa-lg"></i>
+                </a>
+              </li>
+
+            {{/if}}
+
+            <!-- {{> componentI18nSelector}} -->
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+</template>
